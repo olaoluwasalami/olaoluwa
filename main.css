@@ -6,6 +6,9 @@
   width: 10px;
 }
 
+li{
+  list-style: none;
+}
 /* Track */
 ::-webkit-scrollbar-track {
   background:#060606;
@@ -63,6 +66,7 @@ padding: 1.5rem;
 .topnav a.active {
   background-color: #4CAF50;
   color: white;
+  width: auto;
 }
 
 /* Hide the link that should open and close the topnav on small screens */
@@ -104,127 +108,112 @@ padding: 1.5rem;
 }
 
 .button {
-  /* background-color: #4CAF50; */
-  /* Green */
-  border: 2px solid white;
-  color: white;
-  padding: 15px 32px;
-  margin-top: 5vh;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
+   cursor: pointer;
 
 }
-
+/*
 .button:hover {
   background-color: darkcyan;
-}
+} */
 
-.button:active{
+button:active{
    transform: translateY(4px);
    
 }
 
-/* the projects section */
-
-.work{
-  padding-top: 20vh;
-  padding-bottom: 20vh;
-  /* color: white; */
-  display: flex;
-  background-color: #262626
-
+.link-socialmedia{
+  margin-top: 0.5rem;
+ display: inline-flex;
+ 
 }
-.headers{
-  margin: 2rem;
+.fa-github{
+  color: #666;
+ 
 }
-
-
-.project {
-  text-decoration: none;
-  background-color: #c4c4c4;
-  display: inline-block;
-  overflow: hidden;
-  border: 2px solid #ababab;
-  border-radius: 5px;
-  /* height: 220px;
-  width: 280px;
-  margin: 40px 100px; */
-}
-
-.project-pic {
-  width: 100%;
-  height: 180px; 
-  border-bottom: 2px solid #ababab;
-  border-radius: 5px;
-}
-
-.project-title {
-  color: #111;
-  font-weight: bold;
-  padding-top: 6px;
-}
-
-.project-title:hover {
-  color: #939393;
+.fa-linkedin{
+  background-color: #0073b1;
+  color: white;
   
 }
-
-.show-all {
-  color: #111;
-  font-weight: bold;
-  background-color: #c4c4c4;
-  display: block;
-  width: 100px;
-  text-decoration: none;
-  padding: 20px;
-  border: 2px solid #ababab;
-  border-radius: 100px;
-  margin: 0 auto;
+.fa-twitter{
+color: #1da1f2;
 }
 
-.show-all:hover {
-  color: #111;
-  font-size: 15px;
-  font-weight: bold;
-  background-color: #c4c4c4;
-  text-align: center;
-  text-decoration: none;
-  width: 80px;
-  padding: 20px;
-  border: 2px solid #ababab;
-  border-radius: 100px;
+.link-socialmedia > li:not(:last-child)::after {
+  content: "|";
+  margin: 0 .25em;
 }
 
+/* the projects section */
+
+.work-section{
+  
+  padding: 5rem;;
+  display: flex;
+  background-color: #262626;
+  /* justify-content: center; */
+
+}
+.my-skills{ 
+  display: table;
+  table-layout: fixed;
+  width: 40%;    
+}
+
+.skills-list{
+  padding-top: 2rem;
+}
+
+.skills-list li{
+  display: inline-block;
+    
+}
+
+.skills-lists > li:not(:last-child)::after {
+  content: "|";
+  margin: 0 .25em;
+}
+.my-projects{
+  float: right;
+  margin: 4rem;
+  width: 30%;  
+}
+
+.classname{
+  display: flex;
+  /* margin: 2rem; */
+  padding-top: 2rem;
+}
+
+.classname div{
+  margin: 2rem;
+}
 /* contact */
 #contact h2{
-   font-size: 4vh;
+  font-size: 4vh;
 }
 
 #contact {
-  background-color: #110c11;
-  padding: 60px ;
-  color: white;  
-  line-height: 1.6;
-  font-family: 'comfortaa';
- 
+ background-color: #110c11;
+ padding: 60px ;
+ color: white;  
+ line-height: 1.6;
+ font-family: 'comfortaa';
+
 }
 #contact li {
-  list-style: none;
-  color: white;
-  text-decoration: none;
-  line-height: 1.6;
+ list-style: none;
+ color: white;
+ text-decoration: none;
+ line-height: 1.6;
 }
 #contact i{
-  padding-right: 10px;
-  
+ padding-right: 10px;
+ 
 }
 /* .contact-details {
-  padding: 60px;
-  display: inline-block;  
+ padding: 60px;
+ display: inline-block;  
 } */
 .contact-follow{
 color: white;
@@ -232,95 +221,15 @@ font-size: 2.5rem;
 float: right;
 }
 .contact-section {
-  display: flex;
-  margin-top: 2.5rem;
-  
+ display: flex;
+ margin-top: 2.5rem;
+ 
 
 }
 .contact-details{
-  margin-left: 30vh;
-   display: flex;
+ margin-left: 30vh;
+  display: flex;
 }
-
-
-
-* {box-sizing:border-box}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: absolute;
-  margin: auto;
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: relative;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.control{
-  padding: 5vh;
-  padding-bottom: 10vh;
-}
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-
-
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
 
 
 /* mobile section */
@@ -336,7 +245,7 @@ float: right;
   }
 
   .topnav{
-    padding: 0;
+    padding: 1.5rem;
   position: absolute;
   }
 
