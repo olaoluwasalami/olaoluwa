@@ -1,24 +1,35 @@
+<!--
+ Portfolio Website
+By:  Olaoluwa Salami
+Github: yungdenzel
+Twitter: justolaoluwa 
+-->
+
 <!DOCTYPE html>
 <html>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-	<head>
+<head>
 		<title>Portfolio</title>
-		<link rel="stylesheet" type="text/css" href="main.css">
-        <script src="https://kit.fontawesome.com/d49c9b01dd.js" crossorigin="anonymous"></script>
-        <script src="./js/script.js"></script>
-      </head>
+    <link rel="stylesheet" type="text/css" href="main.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+    <script src="https://kit.fontawesome.com/d49c9b01dd.js" crossorigin="anonymous"></script>
+  </head>
+                       <!-- NavBar -->
+             <div class="topnav" id="myTopnav">
+              <a href="#home" class="active">Olaoluwa</a>
+            <div class="float-right">
+              <a href="#projects"></a>
+              <a href="#projects">My Project</a>
+              <a href="#contact">Contact</a>
+              <a href="javascript:void(0);" class="icon" onclick="navBars()">
+                <i class="fa fa-bars"></i>
+              </a>
+            </div>             
+            </div>
+<body>  
+                       <!-- Welcome Section -->
 
-
-    <nav class="menu">
-            
-      <ul class="row" id="navbar">
-     <li class="title"> <img src="./img/logo.PNG" width="120"></img></a></li>
-        <li><a href="#projects" rel="internal">Projects</a></li>
-        <li><a href="#contact" rel="internal">Contact</a></li>
-      </ul>
-    </nav>
-<body>
   <div id="welcome-section" >
       <h1 class="name">   
        Hi, I'm Olaoluwa </h1>
@@ -33,7 +44,7 @@
 <div id="projects" class="work">
   <h2>Here is some of my works</h2>
 
-<div class="">
+<div class="project">
 
 <!-- Slideshow container -->
 <div class="slideshow-container">
@@ -76,6 +87,8 @@
 </div>
  </div>
  </div>
+
+                <!-- Contact Section -->
   <section id="contact">
        <div class="contact-section">
       <!-- <div>
@@ -96,71 +109,7 @@
    </div>
    </div>
   </section>
-  <!-- Javascript -->
-  <script>
-    // typeWriting effect 
-const typedTextSpan = document.querySelector(".typed-text");
-const cursorSpan = document.querySelector(".cursor");
-
-const textArray = [" A Software Engineer", "A React Developer", ];
-const typingDelay = 100;
-const erasingDelay = 100;
-const newTextDelay = 2000; // Delay between current and next text
-let textArrayIndex = 0;
-let charIndex = 0;
-
-function type() {
-if (charIndex < textArray[textArrayIndex].length) { if(!cursorSpan.classList.contains("typing"))
-  cursorSpan.classList.add("typing"); typedTextSpan.textContent +=textArray[textArrayIndex].charAt(charIndex);
-  charIndex++; setTimeout(type, typingDelay); } else { cursorSpan.classList.remove("typing"); setTimeout(erase,
-  newTextDelay); } } function erase() { if (charIndex> 0) {
-  if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-  typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
-  charIndex--;
-  setTimeout(erase, erasingDelay);
-  }
-  else {
-  cursorSpan.classList.remove("typing");
-  textArrayIndex++;
-  if(textArrayIndex>=textArray.length) textArrayIndex=0;
-  setTimeout(type, typingDelay + 1100);
-  }
-  }
-
-  document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
-  if(textArray.length) setTimeout(type, newTextDelay + 250);
-  });
-  
-  // Work carousel
-  var slideIndex = 1;
-  showSlides(slideIndex);
-
-  // Next/previous controls
-  function plusSlides(n) {
-  showSlides(slideIndex += n);
-  }
-
-  // Thumbnail image controls
-  function currentSlide(n) {
-  showSlides(slideIndex = n);
-  }
-
-  function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex=slides.length} for (i=0; i < slides.length; i++) { slides[i].style.display="none" ; } for (i=0;
-    i < dots.length; i++) { dots[i].className=dots[i].className.replace(" active", "" ); }
-    slides[slideIndex-1].style.display="block" ; dots[slideIndex-1].className +=" active" ; }
-  
-  </script>
-
-
-
-
-
-
-
- </body>
+  <script type="text/javascript"  src="./js/script.js"></script>  
+   </body>
+    
 </html>
