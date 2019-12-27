@@ -28,12 +28,13 @@ li{
 html,
 body {
   font-family: 'Raleway','comfortaa', sans-serif;
-  text-align: center;
+  background-color: #060606;  
 }
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /* Nav bar */
@@ -89,6 +90,7 @@ padding: 1.5rem;
 /* about me */
 
 #welcome-section {
+  text-align: center;
   top: 10;
   line-height: 1.6;
   background:#060606;
@@ -147,17 +149,21 @@ color: #1da1f2;
 /* the projects section */
 
 .work-section{
-  
-  padding: 5rem;;
+  padding: 8rem;;
   display: flex;
   background-color: #262626;
   /* justify-content: center; */
+  clip-path: polygon(0 0, 100% 4vw, 100% calc(100% - 4vw), 0 100%);
 
 }
 .my-skills{ 
-  display: table;
-  table-layout: fixed;
-  width: 40%;    
+    width: 40%;  
+    /* margin: 3rem;   */
+}
+.my-skills h2{
+  font-size: 3vh;
+  color: whitesmoke;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .skills-list{
@@ -166,29 +172,46 @@ color: #1da1f2;
 
 .skills-list li{
   display: inline-block;
+
     
 }
 
-.skills-lists > li:not(:last-child)::after {
-  content: "|";
-  margin: 0 .25em;
+.skills-lasts > li:not(:last-child)::after {
+  /* content: "|"; */
+  margin: 0 .30em;
 }
-.my-projects{
+
+  
+      
+
+
+
+/* .my-projects{
   float: right;
-  margin: 4rem;
-  width: 30%;  
+   margin: 4rem; 
+  width: 40%;  
 }
+
 
 .classname{
   display: flex;
-  /* margin: 2rem; */
+   margin: 2rem; 
   padding-top: 2rem;
 }
 
 .classname div{
   margin: 2rem;
 }
-/* contact */
+.classname h4, .my-projects h2{
+  text-align: center;
+}
+*/
+.responsive{
+  max-width: 100%;
+  height: auto; 
+} 
+
+                  /* contact */
 #contact h2{
   font-size: 4vh;
 }
