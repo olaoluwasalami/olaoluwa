@@ -1,3 +1,3 @@
-# olaoluwa
-personal website
-# Using HTML, CSS and Javacript
+
+#Portfolio website
+ Using HTML, CSS and Vanilla Javacript
