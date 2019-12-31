@@ -116,7 +116,7 @@ z-index: 2;
   background-color: darkcyan;
 } */
 
-button:active{
+.buttoned:active{
    transform: translateY(4px);
    
 }
@@ -153,7 +153,7 @@ color: #1da1f2;
 
 .work-section{
   padding: 8rem;;
-  display: flex;
+  /* display: flex; */
   background-color: #262626;
   /* justify-content: center; */
   clip-path: polygon(0 0, 100% 4vw, 100% calc(100% - 4vw), 0 100%);
@@ -177,7 +177,7 @@ color: #1da1f2;
 }
 
 .skills-list li{
-  display: inline-flex;
+  /* display: inline-flex; */
   font-size: 4vh;
 
     
@@ -193,16 +193,37 @@ color: #1da1f2;
   font-weight: lighter;
 }
 
+
+.display-right{
+  position:absolute;
+  top:50%;
+  right:0%;
+  transform:translate(0%,-50%);
+  -ms-transform:translate(0%,-50%);
+  
+}
+
+.display-left{
+  position:absolute;
+  top:50%;
+  left:0%;
+  transform:translate(0%,-50%);
+  -ms-transform:translate(-0%,-50%);
+  
+}
+
     /* carousel */
 .project-list{
     text-align: center;
     width: 100%;
     }
-
  .mySlides{
    padding-top: 2rem;
  }
-
+.light{
+  display: inline-flex;
+  margin-top: 3rem;
+}
  .buttons{
     border: 2px solid white;
     margin: 1rem;
@@ -270,19 +291,28 @@ float: right;
   width: 100%;
   }
   .work-section{
-    display: 0; 
     padding: 2rem;
-    display: inline-block;
-    /* text-align: center; */
-
+    /* padding-bottom: 4rem; */
+    background-color: #262626;
+   
+    clip-path: polygon(0 0, 100% 4vw, 100% calc(100% - 4vw), 0 100%);
+  
+  }
+.buttons{
+  display: inline-block !important;
 }
+.light{
+  display: inline-flex;
+  margin-top: 1rem;
+}
+
 .responsiveness{
-  width: 30%;
+  width: 90%;
   height: auto;
 }
-.project-list{
+/* .project-list{
   text-align: justify;
-}
+} */
 
 
 @media screen and (max-width: 600px) {
