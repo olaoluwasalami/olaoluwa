@@ -18,7 +18,7 @@ navBars = () => {
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
 
-const textArray = [" A Software Engineer", "A Full Stack Developer", ];
+const textArray = [" A Software Engineer", ];
 const typingDelay = 100;
 const erasingDelay = 100;
 const newTextDelay = 2000; // Delay between current and next text

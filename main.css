@@ -27,7 +27,7 @@ li{
 
 html,
 body {
-  font-family: 'Raleway','comfortaa', sans-serif;
+  font-family: 'Courier New', Courier, monospace;
   background-color: #060606;  
 }
 
@@ -110,23 +110,31 @@ z-index: 2;
   color: #dd7732;
 }
 
-
-/*
-.button:hover {
-  background-color: darkcyan;
-} */
-
-.buttoned:active{
-   transform: translateY(4px);
-   
+ button{
+  padding: 0.7rem;
+  font-weight: bold;
+  color:black;
+  background-color:white;
+  border: none;  
 }
+
+.buttoned:hover {
+  background-color: #4CAF50;
+  color: white;
+  /* transform: translateY(4px); */
+  transition-duration: 0.4s;
+}
+
+
 
 .link-socialmedia{
   margin-top: 1rem;
  display: inline-flex;
+ background-color: black;
+ color: blanchedalmond;
  
 }
-.fa-github{
+/* .fa-github{
   color: #666;
  
 }
@@ -142,7 +150,7 @@ color: #1da1f2;
 .fa-envelope{
   color: white;
   }
-  
+   */
 
 .link-socialmedia > li:not(:last-child)::after {
   content: "|";
@@ -189,7 +197,7 @@ color: #1da1f2;
 }
 .skills-lasts{
   color: bisque;
-  font-family: fantasy;
+  font-family: 'Courier New', Courier, monospace;
   font-weight: lighter;
 }
 
@@ -255,7 +263,7 @@ color: #1da1f2;
  padding: 3rem ;
  color: white;  
  line-height: 1.6;
- font-family: 'comfortaa';
+ font-family: 'Courier New', Courier, monospace;
  width: 100%;
 
 }
