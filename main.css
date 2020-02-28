@@ -49,7 +49,7 @@ z-index: 2;
 .topnav a {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: #f2f2f2 !important ;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -59,15 +59,18 @@ z-index: 2;
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: black;
+  color: whitesmoke;
+  
+  
 }
 
 /* Add an active class to highlight the current page */
 .topnav a.active {
-  background-color: #4CAF50;
-  color: white;
+  /* background-color: #4CAF50; */
+  color: whitesmoke;
   width: auto;
+  font-weight: bolder;
 }
 
 /* Hide the link that should open and close the topnav on small screens */
@@ -249,7 +252,7 @@ color: #1da1f2;
 
                   /* contact */
 #contact h5{
-  font-size: 4vh;
+  font-size: 5vh;
   text-align: center;
 }
 #contact p{
@@ -259,27 +262,29 @@ color: #1da1f2;
 
 
 #contact {
+ 
  background-color: #110c11;
  padding: 3rem ;
  color: white;  
  line-height: 1.6;
  font-family: 'Courier New', Courier, monospace;
  width: 100%;
-
+ padding-top: 7.5rem;
+ font-size: rem; 
 }
 
- 
-}
+
+
 /* .contact-details {
  padding: 60px;
  display: inline-block;  
 } */
-.contact-section {
+/* .contact-section {
  
- margin-top: 2.5rem;
+ margin-top: 3.5rem;
  
 
-}
+} */
 .contact-details{
  margin-left: 30vh;
  
